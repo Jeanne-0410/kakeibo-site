@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー — kakeibo</title>
+  <meta name="description" content="iOS アプリ kakeibo のプライバシーポリシー。個人情報の取り扱い、AdMob・StoreKit・CloudKit の利用について。">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1E88E5">
+  <link rel="canonical" href="https://kohaku-note.com/kakeibo/privacy.html">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1E88E5;
+      --text: #1f2937;
+      --text-mid: #4b5563;
+      --text-sub: #6b7280;
+      --bg: #f8fafd;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+    }
+    header.site {
+      background: var(--primary);
+      color: white;
+      padding: 16px 0;
+    }
+    header.site .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .logo small { font-weight: 400; opacity: 0.8; font-size: 12px; margin-left: 6px; }
+    nav.top a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin-left: 16px;
+      opacity: 0.9;
+    }
+    nav.top a:hover { opacity: 1; text-decoration: underline; }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 40px 0 8px;
+    }
+    .lead {
+      color: var(--text-mid);
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 20px 0 8px;
+      color: var(--text);
+    }
+    p, ul, ol {
+      font-size: 15px;
+      color: var(--text);
+      margin: 8px 0 16px;
+    }
+    ul, ol { padding-left: 24px; }
+    li { margin: 4px 0; }
+    a { color: var(--primary); }
+    .updated {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--text-sub);
+      background: var(--card);
+      padding: 4px 12px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .contact {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .contact h3 { margin-top: 0; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-sub);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --text-mid: #d1d5db;
+        --text-sub: #9ca3af;
+        --bg: #0f172a;
+        --card: #1e293b;
+        --border: #334155;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="./" class="logo">kakeibo <small>by kohaku note</small></a>
+    <nav class="top">
+      <a href="./terms.html">利用規約</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>プライバシーポリシー</h1>
+  <span class="updated">最終更新日: 2026-05-24</span>
+  <p class="lead">本ページは iOS アプリ「kakeibo」(以下「本アプリ」) のプライバシーポリシーです。個人情報の取り扱い、AdMob・StoreKit・CloudKit の利用、ユーザーの権利について記載しています。</p>
+
+  <h2>1. 取得する情報</h2>
+  <p>本アプリは、ユーザー本人が入力した家計データ (支出記録、費目、メンバー名、予算など) を <strong>端末内 (iOS の SwiftData ストレージ) にのみ保存</strong> します。これらの情報を当方のサーバーに送信することはありません。</p>
+  <p>将来 iCloud 同期機能を有効化した場合、データは Apple の iCloud (CloudKit) を通じて、ユーザー自身の Apple アカウントに紐づく形でのみ同期されます。当方がそのデータにアクセスすることはできません。</p>
+
+  <h2>2. 第三者提供</h2>
+  <p>当方は、ユーザーの個人情報を第三者に販売・提供しません。ただし、以下の Apple / Google のサービスを利用しており、それぞれのプライバシーポリシーに従って一部のデータが処理されます。</p>
+
+  <h3>2.1 Google AdMob (広告配信)</h3>
+  <p>本アプリの無料版にはバナー広告を表示しており、配信のために Google AdMob を使用しています。AdMob は、広告のパフォーマンス計測やパーソナライズのために、端末識別子 (IDFA など) や IP アドレス、広告との接触情報を取得することがあります。</p>
+  <p>詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a> をご参照ください。</p>
+  <p>ユーザーは iOS の AppTrackingTransparency (ATT) ダイアログでトラッキングを拒否できます。拒否した場合でも、本アプリは制限なく全機能を利用できます。</p>
+
+  <h3>2.2 Apple StoreKit (App 内課金)</h3>
+  <p>プレミアム機能の購入時に Apple の StoreKit を使用します。購入情報は Apple と直接やり取りされ、当方はクレジットカード番号などの支払情報を取得しません。</p>
+
+  <h3>2.3 Apple iCloud / CloudKit (将来)</h3>
+  <p>iCloud 同期や夫婦間共有 (Phase 2 で予定) は Apple の CloudKit を使用します。データはユーザーの Apple アカウントに紐付き、当方は内容にアクセスできません。</p>
+
+  <h2>3. 子供のプライバシー</h2>
+  <p>本アプリは 4+ レーティングですが、特定の年齢層を対象としたアプリではありません。13 歳未満の利用者からの個人情報を意図的に収集することはありません。</p>
+
+  <h2>4. ユーザーの権利</h2>
+  <ul>
+    <li>データの削除: 「設定 → データ管理 → 全データを削除」または iOS の「アプリの削除」でいつでも全データを消去できます。</li>
+    <li>データのエクスポート: 「設定 → エクスポート → 全期間を CSV エクスポート」(プレミアム機能) でユーザー自身が CSV としてデータをポータブル化できます。</li>
+  </ul>
+
+  <h2>5. ポリシーの変更</h2>
+  <p>本ポリシーは予告なく変更されることがあります。変更があった場合は本ページの最終更新日を更新します。重要な変更については、アプリ内通知またはアップデート時のリリースノートでお知らせします。</p>
+
+  <div class="contact">
+    <h3>お問い合わせ</h3>
+    <p>ご意見・ご質問は以下までお願いします。</p>
+    <ul>
+      <li>メール: golf.fr0808.yuki.courage@gmail.com</li>
+      <li>運営: Yuki Hiramitsu (個人開発)</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  © Yuki Hiramitsu · kakeibo &nbsp;|&nbsp; <a href="https://kohaku-note.com/" style="color:inherit;">kohaku note</a>
+</footer>
+
+</body>
+</html>

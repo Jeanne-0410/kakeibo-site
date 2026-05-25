@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kakeibo — ふたりの家計を 1 つに</title>
+  <meta name="description" content="夫婦・カップル向け iOS 家計簿アプリ kakeibo の公式ページ。費目ごとに 3 種類の精算ルール (折半 / 別精算 / 各自負担) が選べる。">
+  <meta name="theme-color" content="#1E88E5">
+  <link rel="canonical" href="https://jeanne-0410.github.io/kakeibo-site/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1E88E5;
+      --primary-dark: #1565C0;
+      --text: #1f2937;
+      --text-mid: #4b5563;
+      --text-sub: #6b7280;
+      --bg: #ffffff;
+      --bg-soft: #f8fafd;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --pink: #F4A6C8;
+      --blue: #6FA8DC;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .hero {
+      background: linear-gradient(180deg, #E3F2FD 0%, #FFFFFF 100%);
+      padding: 60px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      margin: 24px 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero .lead {
+      font-size: 18px;
+      color: var(--text-mid);
+      margin-bottom: 32px;
+    }
+    .icon-art {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .icon-art .circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: 20px;
+    }
+    .icon-art .left { background: var(--pink); left: 0; opacity: 0.85; }
+    .icon-art .right { background: var(--blue); right: 0; opacity: 0.85; }
+    .icon-art .center {
+      position: absolute;
+      width: 50px; height: 50px;
+      background: #fff;
+      border-radius: 50%;
+      top: 35px; left: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    section { padding: 60px 0; }
+    section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 32px;
+      text-align: center;
+    }
+
+    .rules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .rule-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .rule-card .dot {
+      display: inline-block;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .rule-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+    }
+    .rule-card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin: 0;
+    }
+    .rule-card.split .dot { background: #2196F3; }
+    .rule-card.excluded .dot { background: #FB8C00; }
+    .rule-card.personal .dot { background: #9C27B0; }
+
+    .features {
+      background: var(--bg-soft);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      color: var(--text-mid);
+      margin: 0;
+    }
+
+    .price-table {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .price-row {
+      display: flex;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+    .price-row:last-child { border-bottom: 0; }
+    .price-row .label { flex: 1; font-size: 15px; }
+    .price-row .free { width: 100px; text-align: center; color: var(--text-sub); font-size: 14px; }
+    .price-row .premium { width: 100px; text-align: center; color: var(--primary); font-weight: 600; font-size: 14px; }
+    .price-row.header { background: var(--bg-soft); font-weight: 700; }
+
+    .price-tags {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .price-tag {
+      background: var(--card);
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      padding: 16px 24px;
+      text-align: center;
+      min-width: 180px;
+    }
+    .price-tag .name { font-size: 13px; color: var(--text-mid); }
+    .price-tag .price { font-size: 24px; font-weight: 700; color: var(--primary); margin-top: 4px; }
+    .price-tag .note { font-size: 11px; color: var(--text-sub); margin-top: 4px; }
+
+    footer {
+      background: var(--bg-soft);
+      padding: 32px 0;
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+    footer .links a {
+      color: var(--primary);
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    footer .links a:hover { text-decoration: underline; }
+    footer .copyright { margin-top: 16px; font-size: 12px; }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --text-mid: #d1d5db;
+        --text-sub: #9ca3af;
+        --bg: #0f172a;
+        --bg-soft: #1e293b;
+        --card: #1e293b;
+        --border: #334155;
+      }
+      .hero { background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="icon-art">
+      <div class="circle left"></div>
+      <div class="circle right"></div>
+      <div class="center">¥</div>
+    </div>
+    <h1>kakeibo</h1>
+    <p class="lead">ふたりの家計を 1 つに。<br>夫婦・カップル向けの iOS 家計簿アプリ。</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>3 つの精算ルールで「現実」をそのままに</h2>
+    <div class="rules">
+      <div class="rule-card split">
+        <h3><span class="dot"></span>折半対象</h3>
+        <p>支払額を 2 人で平等に。例: 食料品、光熱費。「今月いくらずつ?」が自動計算。</p>
+      </div>
+      <div class="rule-card excluded">
+        <h3><span class="dot"></span>別精算扱い</h3>
+        <p>片方が全額負担。表示は折半。例: 家賃。「実際の送金は不要だけど見かけ上は折半」を実現。</p>
+      </div>
+      <div class="rule-card personal">
+        <h3><span class="dot"></span>各自負担</h3>
+        <p>それぞれの個人支出。精算対象外。例: 美容、サブスク。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2>主な機能</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>📈 ホーム精算カード</h3><p>「ゆうき → あや ¥85,821」を一目で。前月比バッジ付き。</p></div>
+      <div class="feature-card"><h3>🔁 定期支出の自動記録</h3><p>家賃・サブスクは毎月自動入力。サブスク管理画面で月額・年額もまとめて。</p></div>
+      <div class="feature-card"><h3>📊 6 ヶ月トレンド + 円グラフ</h3><p>支出推移と費目別構成比を視覚化。</p></div>
+      <div class="feature-card"><h3>🎯 貯金目標</h3><p>旅行・結婚式などの目標を進捗バーで。</p></div>
+      <div class="feature-card"><h3>📷 レシート OCR</h3><p>写真を撮るだけで金額を自動抽出 (Apple Vision、ローカル動作)。</p></div>
+      <div class="feature-card"><h3>🔒 完全ローカル動作</h3><p>外部サーバーへの送信なし。プライバシー優位。</p></div>
+      <div class="feature-card"><h3>🔍 履歴を全文検索</h3><p>費目・メモ・金額・タグで横断検索。</p></div>
+      <div class="feature-card"><h3>📤 CSV エクスポート</h3><p>支出データをいつでもポータブルに (プレミアム機能)。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>料金</h2>
+    <div class="price-table">
+      <div class="price-row header">
+        <div class="label">機能</div>
+        <div class="free">無料</div>
+        <div class="premium">プレミアム</div>
+      </div>
+      <div class="price-row"><div class="label">支出記録 / 精算</div><div class="free">無制限</div><div class="premium">無制限</div></div>
+      <div class="price-row"><div class="label">費目登録</div><div class="free">20 個まで</div><div class="premium">無制限</div></div>
+      <div class="price-row"><div class="label">履歴閲覧</div><div class="free">直近 3 ヶ月</div><div class="premium">全期間</div></div>
+      <div class="price-row"><div class="label">バナー広告</div><div class="free">あり</div><div class="premium">なし</div></div>
+      <div class="price-row"><div class="label">CSV エクスポート</div><div class="free">—</div><div class="premium">あり</div></div>
+    </div>
+    <div class="price-tags">
+      <div class="price-tag">
+        <div class="name">プレミアム 買切</div>
+        <div class="price">¥1,800</div>
+        <div class="note">一度限りの購入で永久利用</div>
+      </div>
+      <div class="price-tag">
+        <div class="name">プレミアム 月額</div>
+        <div class="price">¥480 <span style="font-size:13px;color:var(--text-sub);">/ 月</span></div>
+        <div class="note">自動更新サブスクリプション</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="links">
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./terms.html">利用規約</a>
+    </div>
+    <div class="copyright">© Yuki Hiramitsu · kakeibo</div>
+  </div>
+</footer>
+
+</body>
+</html>
