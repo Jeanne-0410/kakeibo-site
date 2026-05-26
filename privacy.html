@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>プライバシーポリシー — kakeibo</title>
-  <meta name="description" content="iOS アプリ kakeibo のプライバシーポリシー。個人情報の取り扱い、AdMob・StoreKit・CloudKit の利用について。">
+  <title>プライバシーポリシー — Kakewari</title>
+  <meta name="description" content="iOS アプリ Kakewari のプライバシーポリシー。個人情報の取り扱い、AdMob・StoreKit・CloudKit・PostHog の利用について。">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1E88E5">
+  <meta name="theme-color" content="#DC9C50">
   <link rel="canonical" href="https://jeanne-0410.github.io/kakeibo-site/privacy.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1E88E5;
+      --primary: #DC9C50;
       --text: #1f2937;
       --text-mid: #4b5563;
       --text-sub: #6b7280;
@@ -135,7 +135,7 @@
 
 <header class="site">
   <div class="container">
-    <a href="./" class="logo">kakeibo</a>
+    <a href="./" class="logo">Kakewari</a>
     <nav class="top">
       <a href="./terms.html">利用規約</a>
     </nav>
@@ -144,12 +144,31 @@
 
 <main class="container">
   <h1>プライバシーポリシー</h1>
-  <span class="updated">最終更新日: 2026-05-24</span>
-  <p class="lead">本ページは iOS アプリ「kakeibo」(以下「本アプリ」) のプライバシーポリシーです。個人情報の取り扱い、AdMob・StoreKit・CloudKit の利用、ユーザーの権利について記載しています。</p>
+  <span class="updated">最終更新日: 2026-05-25</span>
+  <p class="lead">本ページは iOS アプリ「Kakewari」(以下「本アプリ」) のプライバシーポリシーです。個人情報の取り扱い、AdMob・StoreKit・CloudKit・PostHog の利用、ユーザーの権利について記載しています。</p>
 
   <h2>1. 取得する情報</h2>
-  <p>本アプリは、ユーザー本人が入力した家計データ (支出記録、費目、メンバー名、予算など) を <strong>端末内 (iOS の SwiftData ストレージ) にのみ保存</strong> します。これらの情報を当方のサーバーに送信することはありません。</p>
+
+  <h3>1.1 家計データ (端末内のみ)</h3>
+  <p>本アプリは、ユーザー本人が入力した家計データ (支出記録、費目、メンバー名、予算、メモ、レシート写真、タグなど) を <strong>端末内 (iOS の SwiftData ストレージ) にのみ保存</strong> します。<strong>これらの情報を当方のサーバーに送信することは一切ありません。</strong></p>
   <p>将来 iCloud 同期機能を有効化した場合、データは Apple の iCloud (CloudKit) を通じて、ユーザー自身の Apple アカウントに紐づく形でのみ同期されます。当方がそのデータにアクセスすることはできません。</p>
+
+  <h3>1.2 匿名の利用統計 (PostHog)</h3>
+  <p>アプリ改善のため、画面遷移・機能利用などの <strong>匿名のイベントデータ</strong> を PostHog (米国) に送信します。具体的には以下のような情報です:</p>
+  <ul>
+    <li>表示中の画面名 (例: ホーム / 入力 / サマリー)</li>
+    <li>機能の利用回数 (例: 支出の追加、レシート OCR の実行)</li>
+    <li>購入画面の表示・購入の成功/失敗</li>
+    <li>OS バージョン、デバイス機種、アプリバージョン等の技術情報</li>
+  </ul>
+  <p><strong>以下は一切送信されません:</strong></p>
+  <ul>
+    <li>支出の金額、メモ、タグの本文</li>
+    <li>レシート写真や OCR の解析結果</li>
+    <li>メンバー名、費目名などのユーザー入力テキスト</li>
+    <li>氏名、メールアドレス、Apple ID 等の個人特定情報</li>
+  </ul>
+  <p>この統計収集は「設定 → プライバシー → 利用統計の送信」からいつでも OFF にできます。</p>
 
   <h2>2. 第三者提供</h2>
   <p>当方は、ユーザーの個人情報を第三者に販売・提供しません。ただし、以下の Apple / Google のサービスを利用しており、それぞれのプライバシーポリシーに従って一部のデータが処理されます。</p>
@@ -165,6 +184,10 @@
   <h3>2.3 Apple iCloud / CloudKit (将来)</h3>
   <p>iCloud 同期や夫婦間共有 (Phase 2 で予定) は Apple の CloudKit を使用します。データはユーザーの Apple アカウントに紐付き、当方は内容にアクセスできません。</p>
 
+  <h3>2.4 PostHog (アプリ利用統計)</h3>
+  <p>1.2 に記載した匿名の利用統計は PostHog Inc. (米国) のサービスに送信され、アプリ改善のために集計・分析されます。家計データを含まないため、個人を特定する情報は当方および PostHog も取得しません。</p>
+  <p>詳細は <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog のプライバシーポリシー</a> をご参照ください。</p>
+
   <h2>3. 子供のプライバシー</h2>
   <p>本アプリは 4+ レーティングですが、特定の年齢層を対象としたアプリではありません。13 歳未満の利用者からの個人情報を意図的に収集することはありません。</p>
 
@@ -172,6 +195,8 @@
   <ul>
     <li>データの削除: 「設定 → データ管理 → 全データを削除」または iOS の「アプリの削除」でいつでも全データを消去できます。</li>
     <li>データのエクスポート: 「設定 → エクスポート → 全期間を CSV エクスポート」(プレミアム機能) でユーザー自身が CSV としてデータをポータブル化できます。</li>
+    <li>利用統計のオプトアウト: 「設定 → プライバシー → 利用統計の送信」を OFF にすることで、以降の PostHog へのイベント送信を停止できます。</li>
+    <li>広告トラッキングの拒否: iOS の AppTrackingTransparency ダイアログ、または iOS「設定 → プライバシー → トラッキング」から拒否できます。</li>
   </ul>
 
   <h2>5. ポリシーの変更</h2>
@@ -181,14 +206,14 @@
     <h3>お問い合わせ</h3>
     <p>ご意見・ご質問は以下までお願いします。</p>
     <ul>
-      <li>メール: golf.fr0808.yuki.courage@gmail.com</li>
-      <li>運営: Yuki Hiramitsu (個人開発)</li>
+      <li>メール: Kakewari.support@gmail.com</li>
+      <li>運営: Kakewari 開発チーム</li>
     </ul>
   </div>
 </main>
 
 <footer>
-  © Yuki Hiramitsu · kakeibo &nbsp;|&nbsp; <a href="./" style="color:inherit;">トップへ</a>
+  © Kakewari 開発チーム &nbsp;|&nbsp; <a href="./" style="color:inherit;">トップへ</a>
 </footer>
 
 </body>
