@@ -7,6 +7,8 @@
   <meta name="description" content="夫婦・カップル向け iOS 家計簿アプリ Kakewari の公式ページ。費目ごとに 3 種類の精算ルール (折半 / 別精算 / 各自負担) が選べる。">
   <meta name="theme-color" content="#DC9C50">
   <link rel="canonical" href="https://jeanne-0410.github.io/kakeibo-site/">
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
+  <link rel="apple-touch-icon" href="./assets/app-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -54,33 +56,13 @@
       color: var(--text-mid);
       margin-bottom: 32px;
     }
-    .icon-art {
+    .app-icon {
       width: 120px;
       height: 120px;
       margin: 0 auto;
-      position: relative;
-    }
-    .icon-art .circle {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      top: 20px;
-    }
-    .icon-art .left { background: var(--pink); left: 0; opacity: 0.85; }
-    .icon-art .right { background: var(--blue); right: 0; opacity: 0.85; }
-    .icon-art .center {
-      position: absolute;
-      width: 50px; height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      top: 35px; left: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 24px;
+      display: block;
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(31, 41, 55, 0.16);
     }
 
     section { padding: 60px 0; }
@@ -223,11 +205,7 @@
 
 <header class="hero">
   <div class="container">
-    <div class="icon-art">
-      <div class="circle left"></div>
-      <div class="circle right"></div>
-      <div class="center">¥</div>
-    </div>
+    <img class="app-icon" src="./assets/app-icon.png" alt="Kakewari アプリアイコン" width="120" height="120">
     <h1>Kakewari</h1>
     <p class="lead">ふたりの家計を 1 つに。<br>夫婦・カップル向けの iOS 家計簿アプリ。</p>
   </div>
@@ -287,12 +265,12 @@
     <div class="price-tags">
       <div class="price-tag">
         <div class="name">プレミアム 買切</div>
-        <div class="price">¥1,800</div>
+        <div class="price">¥2,300</div>
         <div class="note">一度限りの購入で永久利用</div>
       </div>
       <div class="price-tag">
         <div class="name">プレミアム 月額</div>
-        <div class="price">¥480 <span style="font-size:13px;color:var(--text-sub);">/ 月</span></div>
+        <div class="price">¥420 <span style="font-size:13px;color:var(--text-sub);">/ 月</span></div>
         <div class="note">自動更新サブスクリプション</div>
       </div>
     </div>
