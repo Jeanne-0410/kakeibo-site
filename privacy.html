@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>プライバシーポリシー — Kakewari</title>
-  <meta name="description" content="iOS アプリ Kakewari のプライバシーポリシー。個人情報の取り扱い、AdMob・StoreKit・CloudKit・PostHog の利用について。">
+  <meta name="description" content="iOS アプリ Kakewari のプライバシーポリシー。個人情報の取り扱い、AdMob・StoreKit・CloudKit・匿名利用統計の扱いについて。">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#DC9C50">
   <link rel="canonical" href="https://jeanne-0410.github.io/kakeibo-site/privacy.html">
@@ -144,21 +144,21 @@
 
 <main class="container">
   <h1>プライバシーポリシー</h1>
-  <span class="updated">最終更新日: 2026-05-25</span>
-  <p class="lead">本ページは iOS アプリ「Kakewari」(以下「本アプリ」) のプライバシーポリシーです。個人情報の取り扱い、AdMob・StoreKit・CloudKit・PostHog の利用、ユーザーの権利について記載しています。</p>
+  <span class="updated">最終更新日: 2026-06-07</span>
+  <p class="lead">本ページは iOS アプリ「Kakewari」(以下「本アプリ」) のプライバシーポリシーです。個人情報の取り扱い、AdMob・StoreKit・CloudKit・匿名の利用統計/診断データの扱い、ユーザーの権利について記載しています。</p>
 
   <h2>1. 取得する情報</h2>
 
-  <h3>1.1 家計データ (端末内のみ)</h3>
-  <p>本アプリは、ユーザー本人が入力した家計データ (支出記録、費目、メンバー名、予算、メモ、レシート写真、タグなど) を <strong>端末内 (iOS の SwiftData ストレージ) にのみ保存</strong> します。<strong>これらの情報を当方のサーバーに送信することは一切ありません。</strong></p>
-  <p>将来 iCloud 同期機能を有効化した場合、データは Apple の iCloud (CloudKit) を通じて、ユーザー自身の Apple アカウントに紐づく形でのみ同期されます。当方がそのデータにアクセスすることはできません。</p>
+  <h3>1.1 家計データ (端末内 / iCloud)</h3>
+  <p>本アプリは、ユーザー本人が入力した家計データ (支出記録、費目、メンバー名、予算、メモ、レシート写真、タグなど) を <strong>端末内および、ユーザー自身の iCloud (CloudKit) に保存</strong> します。<strong>これらの家計データを当方のサーバーに送信することはありません。</strong></p>
+  <p>iCloud 同期を有効にすると、データは Apple の iCloud を通じて、ユーザー自身の Apple アカウントに紐づく形で同期されます。また「ふたりで共有」機能を使うと、招待した相手 (1 名) とデータを共有できます。いずれの場合も、当方がその家計データの内容にアクセスすることはできません。</p>
 
-  <h3>1.2 匿名の利用統計 (PostHog)</h3>
-  <p>アプリ改善のため、画面遷移・機能利用などの <strong>匿名のイベントデータ</strong> を PostHog (米国) に送信します。具体的には以下のような情報です:</p>
+  <h3>1.2 匿名の利用統計・診断データ</h3>
+  <p>アプリ改善や品質確認のため、画面遷移・機能利用・クラッシュ/診断などの <strong>匿名のデータ</strong> を取得する場合があります。具体的には以下のような情報です:</p>
   <ul>
     <li>表示中の画面名 (例: ホーム / 入力 / サマリー)</li>
     <li>機能の利用回数 (例: 支出の追加、レシート OCR の実行)</li>
-    <li>購入画面の表示・購入の成功/失敗</li>
+    <li>購入画面の表示、購入や復元の成功/失敗</li>
     <li>OS バージョン、デバイス機種、アプリバージョン等の技術情報</li>
   </ul>
   <p><strong>以下は一切送信されません:</strong></p>
@@ -173,20 +173,19 @@
   <h2>2. 第三者提供</h2>
   <p>当方は、ユーザーの個人情報を第三者に販売・提供しません。ただし、以下の Apple / Google のサービスを利用しており、それぞれのプライバシーポリシーに従って一部のデータが処理されます。</p>
 
-  <h3>2.1 Google AdMob (広告配信)</h3>
-  <p>本アプリの無料版にはバナー広告を表示しており、配信のために Google AdMob を使用しています。AdMob は、広告のパフォーマンス計測やパーソナライズのために、端末識別子 (IDFA など) や IP アドレス、広告との接触情報を取得することがあります。</p>
+  <h3>2.1 Google AdMob / User Messaging Platform (広告配信・同意管理)</h3>
+  <p>本アプリの無料版にはバナー広告を表示しており、配信と同意管理のために Google AdMob および Google User Messaging Platform を使用しています。これらのサービスは、広告のパフォーマンス計測やパーソナライズのために、端末識別子 (IDFA など) や IP アドレス、広告との接触情報を取得することがあります。</p>
   <p>詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a> をご参照ください。</p>
   <p>ユーザーは iOS の AppTrackingTransparency (ATT) ダイアログでトラッキングを拒否できます。拒否した場合でも、本アプリは制限なく全機能を利用できます。</p>
 
   <h3>2.2 Apple StoreKit (App 内課金)</h3>
   <p>プレミアム機能の購入時に Apple の StoreKit を使用します。購入情報は Apple と直接やり取りされ、当方はクレジットカード番号などの支払情報を取得しません。</p>
 
-  <h3>2.3 Apple iCloud / CloudKit (将来)</h3>
-  <p>iCloud 同期や夫婦間共有 (Phase 2 で予定) は Apple の CloudKit を使用します。データはユーザーの Apple アカウントに紐付き、当方は内容にアクセスできません。</p>
+  <h3>2.3 Apple iCloud / CloudKit</h3>
+  <p>iCloud 同期および「ふたりで共有」機能は Apple の CloudKit を使用します。データはユーザーの Apple アカウントに紐付き、当方は内容にアクセスできません。</p>
 
-  <h3>2.4 PostHog (アプリ利用統計)</h3>
-  <p>1.2 に記載した匿名の利用統計は PostHog Inc. (米国) のサービスに送信され、アプリ改善のために集計・分析されます。家計データを含まないため、個人を特定する情報は当方および PostHog も取得しません。</p>
-  <p>詳細は <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog のプライバシーポリシー</a> をご参照ください。</p>
+  <h3>2.4 匿名の利用統計・診断</h3>
+  <p>1.2 に記載した匿名の利用統計・診断データは、アプリ改善や品質確認のために集計・分析される場合があります。家計データを含まないため、支出金額・メモ・写真・メンバー名などの内容を当方が取得することはありません。</p>
 
   <h2>3. 子供のプライバシー</h2>
   <p>本アプリは 4+ レーティングですが、特定の年齢層を対象としたアプリではありません。13 歳未満の利用者からの個人情報を意図的に収集することはありません。</p>
@@ -194,8 +193,8 @@
   <h2>4. ユーザーの権利</h2>
   <ul>
     <li>データの削除: 「設定 → データ管理 → 全データを削除」または iOS の「アプリの削除」でいつでも全データを消去できます。</li>
-    <li>データのエクスポート: 「設定 → エクスポート → 全期間を CSV エクスポート」(プレミアム機能) でユーザー自身が CSV としてデータをポータブル化できます。</li>
-    <li>利用統計のオプトアウト: 「設定 → プライバシー → 利用統計の送信」を OFF にすることで、以降の PostHog へのイベント送信を停止できます。</li>
+    <li>データのエクスポート: 「設定 → エクスポート」から CSV 形式で書き出せます (プレミアム機能)。</li>
+    <li>利用統計のオプトアウト: 「設定 → プライバシー → 利用統計の送信」を OFF にすることで、以降の匿名利用統計の送信を停止できます。</li>
     <li>広告トラッキングの拒否: iOS の AppTrackingTransparency ダイアログ、または iOS「設定 → プライバシー → トラッキング」から拒否できます。</li>
   </ul>
 
