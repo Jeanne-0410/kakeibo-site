@@ -1,13 +1,13 @@
 # kakeibo-site
 
-iOS アプリ [kakeibo](https://github.com/Jeanne-0410/kakeibo) の **公開サイト** (プライバシーポリシー / 利用規約 / ランディングページ)。
+iOS アプリ [Kakewari](https://github.com/Jeanne-0410/kakewari) の **公開サイト** (プライバシーポリシー / 利用規約 / ランディングページ)。
 
 GitHub Pages で `https://jeanne-0410.github.io/kakeibo-site/` として公開。
-kakeibo 本体 (Private repo) のプラポリ URL がこのサイトを指す。
+Kakewari 本体 (Private repo) のプラポリ URL がこのサイトを指す。
 
 ## 構成
 
-- `index.html` — kakeibo の紹介ランディングページ (機能・精算ルール 3 種・料金)
+- `index.html` — Kakewari の紹介ランディングページ (機能・精算ルール 3 種・料金)
 - `privacy.html` — プライバシーポリシー
 - `terms.html` — 利用規約
 
@@ -23,7 +23,7 @@ git add . && git commit -m "Update privacy policy" && git push
 
 ## 関連
 
-- kakeibo 本体 (Private): https://github.com/Jeanne-0410/kakeibo
+- Kakewari 本体 (Private): https://github.com/Jeanne-0410/kakewari
 - App Store: (公開後にリンク追加)
 
 ## ライセンス
