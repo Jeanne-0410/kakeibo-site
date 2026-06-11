@@ -1,17 +1,25 @@
-# kakeibo-site
+# Kakewari Public Site
 
-iOS アプリ [Kakewari](https://github.com/Jeanne-0410/kakewari) の **公開サイト** (プライバシーポリシー / 利用規約 / ランディングページ)。
+iOS アプリ **Kakewari** の公開サイトです。App Store Connect のサポート URL、マーケティング URL、プライバシーポリシー URL として使います。
 
-GitHub Pages で `https://jeanne-0410.github.io/kakeibo-site/` として公開。
-Kakewari 本体 (Private repo) のプラポリ URL がこのサイトを指す。
+GitHub Pages:
+
+```text
+https://jeanne-0410.github.io/kakeibo-site/
+```
 
 ## 構成
 
-- `index.html` — Kakewari の紹介ランディングページ (機能・精算ルール 3 種・料金)
+- `index.html` — Kakewari の紹介ランディングページ
 - `privacy.html` — プライバシーポリシー
 - `terms.html` — 利用規約
 
-すべて単一 HTML (CSS インライン)。ダークモード対応。フォントは Google Fonts (Inter + Noto Sans JP)。
+すべて単一 HTML です。アプリ本体と表現がずれないように、以下の点を明記しています。
+
+- レシート OCR は現行リリースの訴求から外す
+- 「完全ローカル」ではなく、iCloud/CloudKit を利用する説明にする
+- 共同費、個別費、毎回えらぶ費目に対応する
+- 月額と買い切りのプレミアム導線を説明する
 
 ## デプロイ
 
@@ -23,9 +31,9 @@ git add . && git commit -m "Update privacy policy" && git push
 
 ## 関連
 
-- Kakewari 本体 (Private): https://github.com/Jeanne-0410/kakewari
+- Kakewari 本体: https://github.com/Jeanne-0410/kakewari
 - App Store: (公開後にリンク追加)
 
 ## ライセンス
 
-サイトコード: MIT。本文 (プラポリ / 利用規約) はアプリの利用規約に従う。
+サイトコードと本文は Kakewari の運用方針に従います。
