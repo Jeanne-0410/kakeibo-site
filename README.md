@@ -2,11 +2,19 @@
 
 iOS アプリ **Kakewari** の公開サイトです。App Store Connect のサポート URL、マーケティング URL、プライバシーポリシー URL として使います。
 
-GitHub Pages:
+現在の GitHub Pages:
 
 ```text
 https://jeanne-0410.github.io/kakeibo-site/
 ```
+
+移行予定の公式URL:
+
+```text
+https://kakewari.app/
+```
+
+独自ドメイン移行と App Store 再申請の手順は `docs/custom-domain-and-app-review.md` を参照してください。
 
 ## 構成
 
@@ -24,6 +32,8 @@ https://jeanne-0410.github.io/kakeibo-site/
 ## デプロイ
 
 main ブランチに push すると GitHub Pages が自動的に再ビルドして公開。
+
+`CNAME` を含む独自ドメイン設定は、`kakewari.app` の購入、DNS設定、GitHub Pages の Custom domain 設定、HTTPS確認が完了してから main に反映します。
 
 ```bash
 git add . && git commit -m "Update privacy policy" && git push
